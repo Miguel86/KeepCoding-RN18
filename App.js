@@ -19,10 +19,11 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    const instructions2 = Platform.OS === 'ios' ? 'Instrucciones para iOS' : 'Instrucciones para Android'
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>{instructions2}</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
