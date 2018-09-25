@@ -31,7 +31,7 @@ export function fetchHouseCharacters(){
         if(!house){
             return
         }
-
+        dispatch(setList([]))
         dispatch(setFetching(true))
 
         console.log("fetchHouseCharacters api: ", api)
