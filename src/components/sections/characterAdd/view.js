@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import { View, TextInput, Text } from 'react-native'
+import { View, Text } from 'react-native'
+import {Button, TextInput} from '../../widgets'
 import styles from './styles'
 
 export default class extends React.Component{
@@ -13,12 +14,11 @@ export default class extends React.Component{
         return(
             <View style={styles.container}>
                 <View style={{padding: 20}}>
-                    <Text style={{color: 'white'}}>{'Nombre del personaje:'}</Text>
-                        <TextInput 
-                            onChangeText={name => this.setState({name})}
-                            value={this.state.name}
-                            style={{backgroundColor: 'white'}}
-                        />
+                    <TextInput
+                        label={'Nombre del personaje'}
+                        value={this.state.name}
+                        onChangeText={name => this.setState({name: name})}
+                    />
                 </View>
             </View>
         )

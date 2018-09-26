@@ -13,7 +13,7 @@ export default class extends React.Component{
         return (
             <View style={styles.container}>
                 <Image source={image} resizeMode={'cover'} style={styles.image} />
-                <View styles={styles.dataContainer}>
+                <View style={styles.dataContainer}>
                     <Text style={{color: 'white'}}>{'Edad: '}</Text>
                     <Text style={{color: 'white'}}>{age}</Text>
                 </View>
