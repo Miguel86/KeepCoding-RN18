@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return {
-        
+        house: state.houses.item,
+        isFetching: state.characters.isFetching || state.houses.isFetching
     }
 }
 

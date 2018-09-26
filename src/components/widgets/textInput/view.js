@@ -7,6 +7,7 @@ export default class extends React.Component{
     static defaultProps = {
         label: '',
         value: '',
+        placeholder: '',
         onChangeText: () => {},
         inputStyle: {},
         labelStyle: {},
@@ -20,6 +21,8 @@ export default class extends React.Component{
                     onChangeText={v => this.props.onChangeText(v)}
                     value={this.props.name}
                     style={[styles.textInput, this.props.inputStyle]}
+                    placeholder={this.props.placeholder}
+                    placeholderTextColor={Colors.main}
                 />
             </View>
         )
